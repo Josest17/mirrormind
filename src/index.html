@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a1b44f488b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer type="module" src="renderer.js"></script>
+    <title>MirrorMind</title>
+    <style>
+      /* Estilos adicionales personalizados */
+      body {
+        background-color: #000000;
+      }
+      .user-section,
+      .weather-section,
+      .news-section,
+      .imc-section,
+      .logo-section {
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+      .imc-section {
+        text-align: end;
+      }
+      .news-separator {
+        height: 2px; /* Altura del separador */
+        background-color: #ddd; /* Color del separador */
+        margin: 10px 0; /* Espacio arriba y abajo del separador */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sección de Usuario -->
+        <div class="col-lg-4">
+          <div class="user-section">
+            <h4>¡Hola, Josué!</h4>
+            <h5 id="date">Hoy es</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 ms-auto text-center">
+          <div class="user-section">
+            <h2 class="display-4 mb-0 font-weight-bold" id="time">00:00</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Sección de Clima -->
+        <div class="col-lg-4">
+          <div class="weather-section">
+            <h3>Clima</h3>
+            <h4 class="display-4 mb-0 font-weight-bold" id="weather">30°C</h4>
+            <div class="d-flex align-items-center">
+              <div class="flex-grow-1" style="font-size: 1rem">
+                <div>
+                  <h6>Humedad</h6>
+                  <i class="fas fa-droplet fa-fw" style="color: #868b94"></i>
+                  <span class="ms-1 font-weight-bold";" id="humidity"> 80% </span>
+                </div>
+              </div>
+              <div>
+                <img
+                  src="https://uxwing.com/wp-content/themes/uxwing/download/weather/sun-color-icon.svg"
+                  width="100px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sección de IMC -->
+        <div class="col-lg-4 ms-auto">
+          <div class="imc-section">
+            <h3>Calculadora de IMC</h3>
+            <div class="d-flex align-items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Person_icon_BLACK-01.svg"
+                width="100px"
+              />
+              <div class="flex-grow-1">
+                <button class="btn btn-primary mb-2" id="calculateIMC">Calcular IMC</button>
+                <div>
+                  <div>
+                    <i
+                      class="fa-solid fa-weight-scale fa-fw"
+                      style="color: #868b94"
+                    ></i
+                    ><span id="weight">0kg</span>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-solid fa-ruler-vertical fa-fw"
+                      style="color: #868b94"
+                    ></i
+                    ><span id="height">0m</span>
+                  </div>
+                  <div>
+                    <h4 class="display-4 font-weight-bold mb-0" id="imc">20.00</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Sección de Noticias -->
+        <div class="col-lg-4">
+          <div class="news-section">
+            <h4>Noticias</h4>
+            <span class="news">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <div class="news-separator"></div> <!-- Separador personalizado -->
+            <span class="news">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <div class="news-separator"></div> <!-- Separador personalizado -->
+            <span class="news">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          </div>
+        </div>
+      </div>
+      <!-- Espacio para el Logo de la Empresa -->
+      <div class="col-lg-2 text-center position-absolute bottom-0 end-0">
+        <div class="logo-section">
+          <img
+            src="../assets/mirrorlogo.jpeg"
+            alt="Logo de la Empresa"
+            style="max-height: 75px"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
